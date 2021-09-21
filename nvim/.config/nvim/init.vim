@@ -9,7 +9,6 @@ source $HOME/.config/nvim/plug-config/neoformat.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/completion.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
-source $HOME/.config/nvim/plug-config/git.vim
 
 luafile $HOME/.config/nvim/lua/plugin/treesitter.lua
 luafile $HOME/.config/nvim/lua/plugin/telescope.lua

@@ -9,6 +9,7 @@ export EDITOR="nvim"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
@@ -104,13 +105,15 @@ eval "`fnm env`"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="clear"
-alias ..="cd .."
-alias r="exec zsh"
-alias alcty="nvim ~/.config/alacritty/alacritty.yml"
-alias nvc="nvim ~/.config/nvim/"
-alias i3c="nvim ~/.config/i3/config"
-alias zc="nvim ~/.zshrc"
-alias ls="ls -lah"
+# alias ls="ls -lah --color"
+alias vi="nvim"
+alias gs="git status"
+alias gal="git add ."
+alias gc="git commit -m"
+alias dc="nvim ~/.dotfiles"
+alias gw="cd ~/go/src/github.com/Gabriel2233/"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 
 # fnm
 export PATH=/home/gabriel/.fnm:$PATH

@@ -7,21 +7,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'moll/vim-bbye'
     Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-fugitive'
-    Plug 'mattn/emmet-vim'
+    Plug 'kyazdani42/nvim-tree.lua'
 
     Plug 'morhetz/gruvbox'
-
-    Plug 'kyazdani42/nvim-tree.lua'
 
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
     Plug 'rust-lang/rust.vim'
-
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-
     Plug 'sbdchd/neoformat'
+    Plug 'tpope/vim-fugitive'
 
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
