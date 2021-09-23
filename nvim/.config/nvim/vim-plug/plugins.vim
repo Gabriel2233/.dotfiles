@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-tree.lua'
 
     Plug 'morhetz/gruvbox'
+    Plug 'navarasu/onedark.nvim'
 
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'

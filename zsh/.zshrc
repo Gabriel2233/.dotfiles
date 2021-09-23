@@ -10,7 +10,7 @@ export EDITOR="nvim"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -80,9 +80,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 # fnm
-export PATH=/home/gabriel/.fnm:$PATH
-eval "`fnm env`"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -115,10 +112,8 @@ alias gw="cd ~/go/src/github.com/Gabriel2233/"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 
-# fnm
-export PATH=/home/gabriel/.fnm:$PATH
-eval "`fnm env`"
-
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+
+SPACESHIP_PROMPT_ORDER=(user dir git exec_time line_sep jobs exit_code char)
