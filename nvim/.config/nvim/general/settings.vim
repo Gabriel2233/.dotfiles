@@ -19,17 +19,12 @@ set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
-" set noshowmode
-set signcolumn=yes
+set noshowmode
+set signcolumn=no
 set isfname+=@-@
-" set ls=0
+set ls=0
 
-" Give more space for displaying messages.
 set cmdheight=1
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
 set updatetime=40
 
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c

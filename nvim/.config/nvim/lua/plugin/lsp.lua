@@ -1,14 +1,20 @@
 local function on_attach()
 end
 
-require'lspconfig'.tsserver.setup{ on_attach=on_attach }
-require'lspconfig'.clangd.setup{
-    on_attach = on_attach,
-    root_dir = function() return vim.loop.cwd() end
+-- require'lspconfig'.tsserver.setup{ on_attach=on_attach }
+require'lspconfig'.ccls.setup{
+  init_options = {
+    compilationDatabaseDirectory = "build";
+    index = {
+      threads = 0;
+    };
+    clang = {
+      excludeArgs = { "-frounding-math"} ;
+    };
+  }
 }
-
-require'lspconfig'.rust_analyzer.setup{ on_attach=on_attach }
-require'lspconfig'.svelte.setup{ on_attach=on_attach }
+-- require'lspconfig'.rust_analyzer.setup{ on_attach=on_attach }
+-- require'lspconfig'.svelte.setup{ on_attach=on_attach }
 
 require'lspconfig'.gopls.setup{
     on_attach=on_attach,

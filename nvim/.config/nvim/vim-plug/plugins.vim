@@ -10,12 +10,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-tree.lua'
 
     Plug 'morhetz/gruvbox'
-    Plug 'navarasu/onedark.nvim'
+    Plug 'norcalli/nvim-colorizer.lua'
 
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/nvim-cmp'
     Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
-    Plug 'rust-lang/rust.vim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
     Plug 'sbdchd/neoformat'
     Plug 'tpope/vim-fugitive'

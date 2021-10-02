@@ -11,25 +11,32 @@
 
 exec --no-startup-id nitrogen --restore
 
-bindsym $mod+g			            exec --no-startup-id picom -CGb
+bindsym $mod+g			            exec --no-startup-id picom -b
 bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 
 set $mod Mod1
 
 font pango:monospace 8
+#528bff
+for_window [class="^.*"] border pixel 3
+# class                 border  backgr. text    indicator child_border
+client.focused          #529bff #528bff #ebdbb2 #528bff   #528bff
+client.focused_inactive #d5c4a1 #d5c4a1 #282828 #d5c4a1   #d5c4a1
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-for_window [class="^.*"] border pixel 2
-                          # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+client.background       #ffffff
 
 floating_modifier $mod
 
 bindsym $mod+m bar mode toggle
 
-bindsym $mod+b exec firefox
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+s exec surf
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -266,4 +273,4 @@ mode "$mode_gaps_left" {
 }
 
 gaps inner 10
-
+gaps outer 10

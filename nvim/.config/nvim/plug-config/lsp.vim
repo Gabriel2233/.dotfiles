@@ -15,5 +15,3 @@ nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>vp :lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <leader>vll :call LspLocationList()<CR>
 nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
-
-
