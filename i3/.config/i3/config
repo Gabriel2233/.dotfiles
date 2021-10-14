@@ -41,7 +41,7 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -c -g 4 -l 4 -bw 1
 
 # change focus
 bindsym $mod+h focus left
