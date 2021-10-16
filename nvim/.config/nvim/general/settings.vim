@@ -28,3 +28,4 @@ set cmdheight=1
 
 set updatetime=40
 
+set laststatus=2

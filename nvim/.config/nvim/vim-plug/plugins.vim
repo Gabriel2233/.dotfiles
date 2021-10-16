@@ -7,10 +7,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'moll/vim-bbye'
     Plug 'tpope/vim-commentary'
-    " Plug 'kyazdani42/nvim-tree.lua'
 
     Plug 'morhetz/gruvbox'
-    Plug 'vim-conf-live/vimconflive2021-colorscheme'
 
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/cmp-nvim-lsp'
@@ -21,10 +19,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
     Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-vinegar'
 
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'ThePrimeagen/harpoon'
 
 call plug#end()
 
