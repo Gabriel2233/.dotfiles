@@ -13,10 +13,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
-    Plug 'simrat39/symbols-outline.nvim'
+
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'rafamadriz/friendly-snippets'
 
     Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
+    Plug 'rust-lang/rust.vim'
+
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-vinegar'

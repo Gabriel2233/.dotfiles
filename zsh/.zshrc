@@ -102,16 +102,18 @@ bindkey -v
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="mate $HOME/.zshrc"
+# alias ohmyzsh="mate $HOME/.oh-my-zsh"
 alias c="clear"
 # alias ls="ls -lah --color"
 alias vi="nvim"
 alias gs="git status"
 alias gal="git add ."
 alias gc="git commit -m"
-alias dc="nvim ~/.dotfiles"
-alias gw="cd ~/go/src/github.com/Gabriel2233/"
+alias dc="nvim $HOME/.dotfiles"
+alias nv="nvim $HOME/.dotfiles/nvim/.config/nvim/init.vim"
+alias gw="cd $HOME/go/src/github.com/Gabriel2233/"
+alias rw="cd $HOME/www/rust"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 

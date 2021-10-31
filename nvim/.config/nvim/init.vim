@@ -4,8 +4,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
-source $HOME/.config/nvim/plug-config/cmp.vim
 source $HOME/.config/nvim/plug-config/harpoon.vim
+source $HOME/.config/nvim/plug-config/snip.vim
 
 luafile $HOME/.config/nvim/lua/plugin/treesitter.lua
 luafile $HOME/.config/nvim/lua/plugin/telescope.lua
@@ -21,31 +21,25 @@ fun! EmptyRegisters()
         call setreg(r, [])
     endfor
 endfun
-
 nnoremap <leader>reg :call EmptyRegisters()<CR>
 
-" vim the hard way
-let g:maplocalleader='-'
+fun! ColorMyPencils()
+    highlight ColorColumn ctermbg=0 guibg=grey
+    hi SignColumn guibg=none
+    hi CursorLineNR guibg=None
+    highlight Normal guibg=none
+    highlight LineNr guifg=#5eacd3
+endfun
 
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+call ColorMyPencils()
+nnoremap <leader>cmp :call ColorMyPencils()<CR>
+
 nnoremap <leader>so :source $MYVIMRC<CR>  
-
-vnoremap <leader>' :<esc>ea"<esc>bi"<esc>A
-
-inoremap jk <esc>
+vnoremap <leader>' :<esc>ea"<esc>bi"<esc>
+inoremap kj <esc>
 inoremap <esc> <nop>
 
- augroup CPP_COMMENT
+augroup CPP_COMMENT
      autocmd!
      autocmd FileType cpp setlocal commentstring=//\ %s
- augroup END
-
- augroup ABBREVS
-    autocmd!
-    autocmd FileType go :iabbrev <buffer> ien if err != nil<esc>
-    autocmd FileType go :iabbrev <buffer> mn func main()<esc>
- augroup END
-
- augroup ABBREVS
-    autocmd BufWrite,BufLeave *.go :GoFmt
- augroup END
+augroup END
