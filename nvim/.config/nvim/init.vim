@@ -39,6 +39,8 @@ vnoremap <leader>' :<esc>ea"<esc>bi"<esc>
 inoremap kj <esc>
 inoremap <esc> <nop>
 
+nnoremap <Tab> :bnext<CR>
+
 augroup CPP_COMMENT
      autocmd!
      autocmd FileType cpp setlocal commentstring=//\ %s

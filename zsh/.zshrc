@@ -78,6 +78,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export PATH=$PATH:/home/gabriel/.local/bin
+
 # export MANPATH="/usr/local/man:$MANPATH"
 # fnm
 # You may need to manually set your language environment
@@ -105,20 +107,17 @@ bindkey -v
 # alias zshconfig="mate $HOME/.zshrc"
 # alias ohmyzsh="mate $HOME/.oh-my-zsh"
 alias c="clear"
-# alias ls="ls -lah --color"
-alias vi="nvim"
-alias gs="git status"
-alias gal="git add ."
-alias gc="git commit -m"
+alias cat="bat"
 alias dc="nvim $HOME/.dotfiles"
 alias nv="nvim $HOME/.dotfiles/nvim/.config/nvim/init.vim"
-alias gw="cd $HOME/go/src/github.com/Gabriel2233/"
-alias rw="cd $HOME/www/rust"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias ss="$HOME/.local/bin/sessionizer.sh"
+
+alias gw="cd $HOME/go/src/github.com/Gabriel2233/"
+alias rw="cd $HOME/www/rust"
+alias cpw="cd $HOME/www/cpp"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-
-SPACESHIP_PROMPT_ORDER=(user dir git exec_time line_sep jobs exit_code char)

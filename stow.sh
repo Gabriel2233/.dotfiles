@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools=('tmux' 'zsh' 'picom')
+tools=('tmux' 'zsh' 'picom' 'bin')
 
 Red='\033[0;31m'          
 Green='\033[0;32m'        

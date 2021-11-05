@@ -18,7 +18,7 @@ set $mod Mod1
 
 font pango:monospace 8
 #528bff
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 1
 # class                 border  backgr. text    indicator child_border
 client.focused          #529bff #528bff #ebdbb2 #528bff   #528bff
 client.focused_inactive #d5c4a1 #d5c4a1 #282828 #d5c4a1   #d5c4a1
@@ -33,7 +33,6 @@ floating_modifier $mod
 bindsym $mod+m bar mode toggle
 
 bindsym $mod+Shift+f exec firefox
-bindsym $mod+Shift+s exec surf
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -41,7 +40,7 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -c -g 4 -l 4 -bw 1
+bindsym $mod+p exec dmenu_run -c -g 4 -l 4 -bw 1
 
 # change focus
 bindsym $mod+h focus left
@@ -272,5 +271,5 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-gaps inner 10
-gaps outer 10
+gaps inner 0
+gaps outer 0
