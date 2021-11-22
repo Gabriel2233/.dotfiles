@@ -112,7 +112,9 @@ alias dc="nvim $HOME/.dotfiles"
 alias nv="nvim $HOME/.dotfiles/nvim/.config/nvim/init.vim"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+
 alias ss="$HOME/.local/bin/sessionizer.sh"
+alias rcd="$HOME/.local/bin/record.sh"
 
 alias gw="cd $HOME/go/src/github.com/Gabriel2233/"
 alias rw="cd $HOME/www/rust"

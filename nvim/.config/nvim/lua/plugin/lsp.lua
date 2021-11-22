@@ -46,7 +46,7 @@ require'lspconfig'.gopls.setup(config({
     },
 }))
 
-require'lspconfig'.rust_analyzer.setup(config({}))
+require'lspconfig'.rls.setup(config({}))
 
 local snippets_paths = function()
     local plugins = { "friendly-snippets" }
