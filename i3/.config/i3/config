@@ -10,6 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id dunst
 
 bindsym $mod+g			            exec --no-startup-id picom -b
 bindsym $mod+Shift+p		        exec --no-startup-id killall picom

@@ -30,8 +30,10 @@ local function config(_config)
 end
 
 require'lspconfig'.clangd.setup(config({
-    cmd = { "clangd", "--background-index", "--clang-tidy" },
-    root_dir = function() return vim.loop.cwd() end
+    cmd = { "clangd", "--background-index" },
+    root_dir = function() return vim.loop.cwd() end,
+    filetypes = { "c", "cpp" },
+    single_file_support = true,
 }))
 
 require'lspconfig'.gopls.setup(config({

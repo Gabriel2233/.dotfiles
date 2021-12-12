@@ -104,8 +104,6 @@ bindkey -v
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate $HOME/.zshrc"
-# alias ohmyzsh="mate $HOME/.oh-my-zsh"
 alias c="clear"
 alias cat="bat"
 alias dc="nvim $HOME/.dotfiles"
@@ -119,6 +117,8 @@ alias rcd="$HOME/.local/bin/record.sh"
 alias gw="cd $HOME/go/src/github.com/Gabriel2233/"
 alias rw="cd $HOME/www/rust"
 alias cpw="cd $HOME/www/cpp"
+
+alias ydl="yt-dlp"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin

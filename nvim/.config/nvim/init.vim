@@ -11,7 +11,9 @@ luafile $HOME/.config/nvim/lua/plugin/treesitter.lua
 luafile $HOME/.config/nvim/lua/plugin/telescope.lua
 luafile $HOME/.config/nvim/lua/plugin/lsp.lua
 luafile $HOME/.config/nvim/lua/plugin/harpoon.lua
-luafile $HOME/.config/nvim/lua/plugin/statusline.lua
+" luafile $HOME/.config/nvim/lua/plugin/statusline.lua
+
+lua require'colorizer'.setup()
 
 nnoremap <leader>q :Bdelete<CR>
 

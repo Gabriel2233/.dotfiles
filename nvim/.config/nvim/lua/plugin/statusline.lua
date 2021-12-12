@@ -40,7 +40,6 @@ local function get_file_name()
 end
 
 local function get_git_info(force)
-
     if force or not git_branch or git_branch == "" then
         git_branch = vim.fn["fugitive#head"]()
         if not git_branch or git_branch == "" then
@@ -54,11 +53,12 @@ end
 
 local function lsp_info()
 
-    local warnings = vim.lsp.diagnostic.get_count(0, "Warning")
-    local errors = vim.lsp.diagnostic.get_count(0, "Error")
-    local hints = vim.lsp.diagnostic.get_count(0, "Hint")
+    local tbw = {}
+    local warnings = vim.diagnostic.get(0, table.insert(tbw, vim.diagnostic.severity.ERROR))
+    -- local errors = vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
+    -- local hints = vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
 
-    return string.format("LSP: H %d W %d E %d", hints, warnings, errors)
+    -- return string.format("LSP: H %d W %d E %d", hints, warnings, errors)
 end
 
 local function harpoon_status()
