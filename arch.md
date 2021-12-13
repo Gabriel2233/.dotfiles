@@ -2,17 +2,15 @@
 `ip -c a`
 
 # List keyboards
-
-`localectl list-keymaps | grep br`
 `loadkeys br-abnt2`
 
 # System Clock
-
 `timedatectl set-ntp true`
 
 # Partitions
 
 ## Create
+
 `gdisk <DEVICE>`
 
 ```
@@ -33,7 +31,7 @@ mkswap /dev/<SWAP_DEVICE>
 mkfs.ext4 /dev/<ROOT_DEVICE>
 ```
 
-# Mount the filesystems
+# Mount
 
 ```
 mount /dev/<ROOT_DEVICE> /mnt
@@ -46,10 +44,9 @@ swapon /dev/<SWAP_DEVICE>
 
 # Install the base packages
 
-`pacstrap /mnt base linux linux-firmware vim git networkmanager grub efibootmgr sudo`
+`pacstrap /mnt base linux linux-firmware vim git`
 
-# Generate fs tab
+# Generate fs tab and chroot
 
 `genfstab -U /mnt >> /mnt/etc/fstab`
 `arch-chroot /mnt`
-
