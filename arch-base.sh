@@ -11,20 +11,20 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 
-pacman -S grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant reflector base-devel linux-headers avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh rsync acpi acpi_call tlp firewalld acpid
+pacman -S grub efibootmgr
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
-systemctl enable NetworkManager
-systemctl enable bluetooth
-systemctl enable cups.service
-systemctl enable sshd
-systemctl enable avahi-daemon
-systemctl enable tlp 
-systemctl enable reflector.timer
-systemctl enable fstrim.timer
-systemctl enable firewalld
-systemctl enable acpid
+echo "Root user password: " 
+passwd
 
-printf "\e[1;32mDone! Now change your root password and create a new user in the wheel group!\e[0m"
+echo "New user password: "
+useradd -m -G wheel -s /bin/bash gabriel
+passwd gabriel
+
+echo "Rebooting in 3 seconds..."
+sleep 3
+
+exit
+reboot
