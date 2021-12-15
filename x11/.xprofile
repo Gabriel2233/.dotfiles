@@ -1,7 +1,7 @@
 #!/bin/sh
 
 nitrogen --restore &
-[ -z $(pidof -s picom) ] && picom --config $HOME/.config/picom/picom.conf
+picom --config $HOME/.config/picom/picom.conf &
 
 autostart="xcompmgr dunst pipewire"
 

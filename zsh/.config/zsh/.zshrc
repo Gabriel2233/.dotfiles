@@ -98,4 +98,3 @@ prompt_mytheme_setup() {
 prompt_themes+=( mytheme )
 
 prompt mytheme
-

@@ -6,18 +6,30 @@ sudo pacman -S --needed --noconfirm xorg-server xorg-xbacklight xorg-xinit xorg-
             xcape xclip xdotool alacritty i3 picom evince zathura \
             zathura-pdf-mupdf zsh stow tmux sxiv
 
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 echo "Installing yay..."
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -csi
 cd ..
 
 echo "Installing ly dm..."
 git clone https://aur.archlinux.org/ly
-cd ly;makepkg -si
+cd ly;makepkg -csi
 sudo systemctl enable ly
 cd ..
 
-yay -S brave-bin autotiling onlyoffice-bin
+echo "Installing dmenu..."
+git clone https://github.com/Gabriel2233/dmenu_build.git
+cd dmenu_build
+sudo make clean install
+cd ..
 
-.dotfiles/stow.sh
+yay -S --noconfirm --needed brave-bin autotiling
+
+cd .dotfiles
+./stow.sh
+cd ..
