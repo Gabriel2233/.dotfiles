@@ -11,6 +11,7 @@
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id dunst
+exec_always --no-startup-id autotiling
 
 bindsym $mod+g			            exec --no-startup-id picom -b
 bindsym $mod+Shift+p		        exec --no-startup-id killall picom
@@ -18,10 +19,10 @@ bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 set $mod Mod1
 
 font pango:monospace 8
-#528bff
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
+# #529bff
 # class                 border  backgr. text    indicator child_border
-client.focused          #529bff #528bff #ebdbb2 #528bff   #528bff
+client.focused          #fb8500 #fb8500 #ebdbb2 #fb8500   #fb8500
 client.focused_inactive #d5c4a1 #d5c4a1 #282828 #d5c4a1   #d5c4a1
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -139,8 +140,6 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
         status_command i3status
         tray_output primary
@@ -267,8 +266,8 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-gaps inner 0
-gaps outer 0
+gaps inner 6
+gaps outer 4
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume

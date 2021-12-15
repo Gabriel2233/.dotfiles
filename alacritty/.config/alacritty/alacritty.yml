@@ -214,33 +214,95 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
   
-# XTerm's default colors
+# Gruvbox Dark
 colors:
-  # Default colors
-  primary:
-    background: '0x000000'
-    foreground: '0xffffff'
-  # Normal colors
-  normal:
-    black:   '0x000000'
-    red:     '0xcd0000'
-    green:   '0x00cd00'
-    yellow:  '0xcdcd00'
-    blue:    '0x0000ee'
-    magenta: '0xcd00cd'
-    cyan:    '0x00cdcd'
-    white:   '0xe5e5e5'
+ # Default colors
+ primary:
+   hard contrast: background = '#1d2021'
+   # background: '#282828'
+   # soft contrast: background = '#32302f'
+   foreground: '#ebdbb2'
 
-  # Bright colors
-  bright:
-    black:   '0x7f7f7f'
-    red:     '0xff0000'
-    green:   '0x00ff00'
-    yellow:  '0xffff00'
-    blue:    '0x5c5cff'
-    magenta: '0xff00ff'
-    cyan:    '0x00ffff'
-    white:   '0xffffff'
+ # Normal colors
+ normal:
+   black:   '#282828'
+   red:     '#cc241d'
+   green:   '#98971a'
+   yellow:  '#d79921'
+   blue:    '#458588'
+   magenta: '#b16286'
+   cyan:    '#689d6a'
+   white:   '#a89984'
+
+ # Bright colors
+ bright:
+   black:   '#928374'
+   red:     '#fb4934'
+   green:   '#b8bb26'
+   yellow:  '#fabd2f'
+   blue:    '#83a598'
+   magenta: '#d3869b'
+   cyan:    '#8ec07c'
+   white:   '#ebdbb2'
+
+# # Modus Operandi
+# colors:
+#   # Default colors
+#   primary:
+#     # hard contrast: background = '#1d2021'
+#     background: '#ffffff'
+#     # soft contrast: background = '#32302f'
+#     foreground: '#000000'
+
+#   # Normal colors
+#   normal:
+#     black:   '#000000'
+#     red:     '#a60000'
+#     green:   '#005e00'
+#     yellow:  '#813e00'
+#     blue:    '#0031a9'
+#     magenta: '#721045'
+#     cyan:    '#00538b'
+#     white:   '#ffffff'
+
+#   # Bright colors
+#   bright:
+#     black:   '#282828'
+#     red:     '#7f1010'
+#     green:   '#104410'
+#     yellow:  '#5f4400'
+#     blue:    '#003497'
+#     magenta: '#752f50'
+#     cyan:    '#005007'
+#     white:   '#f8f8f8'
+  
+# # XTerm's default colors
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x000000'
+#     foreground: '0xffffff'
+#   # Normal colors
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xcd0000'
+#     green:   '0x00cd00'
+#     yellow:  '0xcdcd00'
+#     blue:    '0x0000ee'
+#     magenta: '0xcd00cd'
+#     cyan:    '0x00cdcd'
+#     white:   '0xe5e5e5'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x7f7f7f'
+#     red:     '0xff0000'
+#     green:   '0x00ff00'
+#     yellow:  '0xffff00'
+#     blue:    '0x5c5cff'
+#     magenta: '0xff00ff'
+#     cyan:    '0x00ffff'
+#     white:   '0xffffff'
 
 # Visual Bell
 #

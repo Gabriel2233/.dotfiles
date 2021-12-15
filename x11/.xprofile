@@ -1,0 +1,10 @@
+#!/bin/sh
+
+nitrogen --restore &
+[ -z $(pidof -s picom) ] && picom --config $HOME/.config/picom/picom.conf
+
+autostart="xcompmgr dunst pipewire"
+
+for program in $autostart; do
+	pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
