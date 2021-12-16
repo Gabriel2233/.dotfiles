@@ -4,7 +4,9 @@ sudo pacman -S --needed --noconfirm xorg-server xorg-xbacklight xorg-xinit xorg-
             xorg-xprop libnotify dunst nitrogen man-db noto-fonts \
             noto-fonts-emoji ttf-linux-libertine ttf-inconsolata maim \
             xcape xclip xdotool alacritty i3 picom evince zathura \
-            zathura-pdf-mupdf zsh stow tmux sxiv
+            zathura-pdf-mupdf zsh stow tmux sxiv cronie
+
+sudo systemctl start --now cronie.service
 
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
