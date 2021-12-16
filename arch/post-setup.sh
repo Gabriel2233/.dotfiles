@@ -1,6 +1,10 @@
 #!/bin/sh
 
-sudo pacman -S --needed --noconfirm xorg-server xorg-xbacklight xorg-xinit xorg-xwininfo xcompmgr \
+sudo timedatectl set-ntp true
+sudo hwclock --systohc
+sudo reflector -c Brazil -a 12 --sort rate --save /etc/pacman.d/mirrorlist
+
+sudo pacman -Syyu --needed --noconfirm xorg-server xorg-xbacklight xorg-xinit xorg-xwininfo xcompmgr \
             xorg-xprop libnotify dunst nitrogen man-db noto-fonts \
             noto-fonts-emoji ttf-linux-libertine ttf-inconsolata maim \
             xcape xclip xdotool alacritty i3 picom evince zathura \
