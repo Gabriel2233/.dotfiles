@@ -25,7 +25,6 @@ systemctl enable avahi-daemon
 systemctl enable tlp
 systemctl enable reflector.timer
 systemctl enable fstrim.timer
-systemctl enable libvirtd
 systemctl enable firewalld
 systemctl enable acpid
 

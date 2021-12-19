@@ -2,8 +2,7 @@ export ZSH="/home/gabriel/.oh-my-zsh"
 export EDITOR="nvim"
 export DISPLAY=":0"
 
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,13 +87,3 @@ alias ydl="yt-dlp"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-
-autoload -Uz promptinit && promptinit
-
-prompt_mytheme_setup() {
-    PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%c%{$fg[red]%}]%{$reset_color%}$%b "
-}
-
-prompt_themes+=( mytheme )
-
-prompt mytheme

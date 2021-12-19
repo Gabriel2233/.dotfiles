@@ -10,7 +10,7 @@ sudo pacman -Syyu --needed xorg-server xorg-xbacklight xorg-xinit xorg-xwininfo 
             xorg-xprop libnotify dunst nitrogen man-db noto-fonts \
             noto-fonts-emoji ttf-linux-libertine ttf-inconsolata maim \
             xcape xclip xdotool alacritty i3 picom evince zathura \
-            zathura-pdf-mupdf zsh stow tmux sxiv cronie
+            zathura-pdf-mupdf zsh stow tmux sxiv cronie thunar
 
 sudo systemctl start --now cronie.service
 
