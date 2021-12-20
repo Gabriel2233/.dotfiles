@@ -19,10 +19,9 @@ bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 set $mod Mod1
 
 font pango:monospace 8
-for_window [class="^.*"] border pixel 2
-# #529bff
+for_window [class="^.*"] border pixel 1
 # class                 border  backgr. text    indicator child_border
-client.focused          #fb8500 #fb8500 #ebdbb2 #fb8500   #fb8500
+client.focused          #529bff #529bff #ebdbb2 #529bff   #529bff
 client.focused_inactive #d5c4a1 #d5c4a1 #282828 #d5c4a1   #d5c4a1
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -40,7 +39,7 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+p exec dmenu_run -c -g 4 -l 4 -bw 1
+bindsym $mod+p exec dmenu_run -c -g 4 -l 4 -bw 2
 
 # change focus
 bindsym $mod+h focus left
@@ -273,5 +272,5 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness

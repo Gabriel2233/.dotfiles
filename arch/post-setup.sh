@@ -6,11 +6,11 @@ sudo hwclock --systohc
 sudo reflector -c Brazil -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 
 echo "Installing packages..."
-sudo pacman -Syyu --needed xorg-server xorg-xbacklight xorg-xinit xorg-xwininfo xcompmgr \
+sudo pacman -Syyu --needed xorg-server xorg-xbacklight xorg-xinit xorg-xwininfo \
             xorg-xprop libnotify dunst nitrogen man-db noto-fonts \
             noto-fonts-emoji ttf-linux-libertine ttf-inconsolata maim \
             xcape xclip xdotool alacritty i3 picom evince zathura \
-            zathura-pdf-mupdf zsh stow tmux sxiv cronie thunar
+            zathura-pdf-mupdf zsh stow tmux sxiv cronie thunar htop neofetch
 
 sudo systemctl start --now cronie.service
 
@@ -41,4 +41,3 @@ cd ..
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
