@@ -5,13 +5,13 @@ source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/harpoon.vim
-source $HOME/.config/nvim/plug-config/snip.vim
 
 luafile $HOME/.config/nvim/lua/plugin/treesitter.lua
 luafile $HOME/.config/nvim/lua/plugin/telescope.lua
 luafile $HOME/.config/nvim/lua/plugin/lsp.lua
+luafile $HOME/.config/nvim/lua/plugin/cmp.lua
 luafile $HOME/.config/nvim/lua/plugin/harpoon.lua
-" luafile $HOME/.config/nvim/lua/plugin/statusline.lua
+luafile $HOME/.config/nvim/lua/plugin/lualine.lua
 
 lua require'colorizer'.setup()
 

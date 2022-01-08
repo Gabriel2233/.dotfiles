@@ -78,11 +78,9 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias ss="$HOME/.local/bin/sessionizer.sh"
 alias rcd="$HOME/.local/bin/record.sh"
 
-alias gw="cd $HOME/go/src/github.com/Gabriel2233/"
-alias rw="cd $HOME/www/rust"
-alias cpw="cd $HOME/www/cpp"
+alias gw="cd $HOME/www/projects/go"
 
-alias ydl="yt-dlp"
+alias nfc="neofetch --ascii_distro Arch_old"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
