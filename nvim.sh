@@ -2,6 +2,9 @@
 
 nvim_path = $HOME/gabriel/neovim
 
+echo "Updating system first..."
+sudo pacman -Syy
+
 echo "Removing old neovim..."
 if [ -z $(which nvim) ]
 then
@@ -16,7 +19,7 @@ fi
 echo "Installing dependencies"
 sudo pacman --noconfirm --needed -S base-devel cmake unzip ninja tree-sitter curl
 echo "Cloning neovim repo..."
-git clone git@github.com:neovim/neovim.git
+git clone https://github.com/neovim/neovim.git
 
 echo "Installing Neovim, this will take a while..."
 cd $HOME/neovim

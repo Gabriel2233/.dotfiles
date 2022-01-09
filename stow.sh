@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tools=('tmux' 'zsh' 'picom' 'local' 'zathura' 'nvim' 'alacritty' 'dunst' 'x11' 'i3') 
+tools=('tmux' 'zsh' 'picom' 'nvim' 'alacritty' 'dunst' 'i3') 
 
 for tool in "${tools[@]}"
 do
