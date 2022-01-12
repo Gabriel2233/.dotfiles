@@ -168,6 +168,9 @@ mode "resize" {
 
 bindcode $mod+27 mode "resize"
 
+gaps inner 6
+gaps outer 4
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume

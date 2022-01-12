@@ -1,0 +1,6 @@
+require'plugin.cmp'
+require'plugin.el'
+require'plugin.harpoon'
+require'plugin.lsp'
+require'plugin.telescope'
+require'plugin.treesitter'
