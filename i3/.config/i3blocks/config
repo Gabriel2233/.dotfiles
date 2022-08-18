@@ -10,7 +10,7 @@ interval=2
 color=#C9E3DB
 
 [MEM]
-command=free -h | grep Mem | awk '{ printf("Mem: 🐏 %5s/%s \n", $2, $3) }'
+command=free -h | grep Mem | awk '{ printf("🐏 %5s/%s \n", $2, $3) }'
 interval=1
 color=#FEC925
 

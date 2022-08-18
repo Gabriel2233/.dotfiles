@@ -1,7 +1,7 @@
 local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {
-        file_ignore_patterns = {"node_modules", ".git", ".autoload"},
+        file_ignore_patterns = { '.git' },
         file_sorter = require('telescope.sorters').get_fzy_sorter,
         prompt_prefix = ' >',
 
@@ -11,18 +11,29 @@ require('telescope').setup {
 
         mappings = {
             i = {
-                ["<C-x>"] = false,
-                ["<C-q>"] = actions.send_to_qflist,
+                ["<Leader>q"] = "close",
+                ["<C-h>"] = "which_key",
+
+                ["<C-o>"] = "preview_scrolling_down",
+                ["<C-p>"] = "preview_scrolling_up"
+            },
+            n = {
+                ["<Leader>q"] = "close",
+                ["<C-h>"] = "which_key",
+
+                ["<C-o>"] = "preview_scrolling_down",
+                ["<C-p>"] = "preview_scrolling_up"
             },
         }
     },
 }
 
 local M = {}
+
 M.search_dotfiles = function()
     require("telescope.builtin").find_files({
-        prompt_title = "< VimRC >",
-        cwd = "~/.dotfiles/nvim",
+        cwd = "/home/gabriel/.dotfiles",
+        hidden = true,
     })
 end
 

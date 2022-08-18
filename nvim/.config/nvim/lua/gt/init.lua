@@ -1,0 +1,10 @@
+require"gt.cmp"
+require"gt.el"
+require"gt.harpoon"
+require"gt.keymaps"
+require"gt.lsp"
+require"gt.options"
+require"gt.plugins"
+require"gt.telescope"
+require"gt.treesitter"
+

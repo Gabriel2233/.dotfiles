@@ -1,4 +1,5 @@
 local opt = vim.opt
+vim.g.mapleader = ' '
 
 opt.completeopt    = {
   "menu",
@@ -6,6 +7,8 @@ opt.completeopt    = {
   "noselect",
   "noinsert",
 } -- better completion
+opt.termguicolors = true
+opt.signcolumn = "yes"
 opt.showmode = false
 opt.showcmd = true
 opt.cmdheight = 1 -- Height of the command bar
@@ -21,13 +24,13 @@ opt.equalalways = false -- I don't like my windows changing all the time
 opt.splitright = true -- Prefer windows splitting to the right
 opt.splitbelow = true -- Prefer windows splitting to the bottom
 opt.updatetime = 4000 -- Make updates happen faster
-opt.hlsearch = true -- I wouldn't use this without my DoNoHL function
+opt.hlsearch = false -- I wouldn't use this without my DoNoHL function
 opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
 
 -- Tabs
 opt.autoindent = true
 opt.cindent = true
-opt.wrap = true
+opt.wrap = false
 
 opt.tabstop = 4
 opt.shiftwidth = 4
@@ -52,26 +55,9 @@ opt.shada = { "!", "'1000", "<50", "s10", "h" }
 
 opt.mouse = "n"
 
----- Helpful related items:
-----   1. :center, :left, :right
-----   2. gw{motion} - Put cursor back after formatting motion.
-----
----- TODO: w, {v, b, l}
---opt.formatoptions = opt.formatoptions
---  - "a" -- Auto formatting is BAD.
---  - "t" -- Don't auto format my code. I got linters for that.
---  + "c" -- In general, I like it when comments respect textwidth
---  + "q" -- Allow formatting comments w/ gq
---  - "o" -- O and o, don't continue comments
---  + "r" -- But do continue when pressing enter.
---  + "n" -- Indent past the formatlistpat, not underneath it.
---  + "j" -- Auto-remove comments if possible.
---  - "2" -- I'm not in gradeschool anymore
-
 -- set joinspaces
 opt.joinspaces = false -- Two spaces and grade school, we're done
 
 -- set fillchars=eob:~
 opt.fillchars = { eob = "~" }
-
-print(vim.opt.completeopt)
+opt.guicursor = "n-v-c:block-Cursor"

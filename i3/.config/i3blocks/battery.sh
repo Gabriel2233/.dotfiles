@@ -35,11 +35,11 @@ then
         if [ "${BAT_LEVEL%?}" -le 15 ]
         then
             # Battery very low. Red color.
-            /usr/bin/notify-send -u "Critical" "Battery" "Battery is low"
+            # /usr/bin/notify-send -u "Critical" "Battery" "Battery is low"
             echo "#FA1E44"
         else
             # Battery not charging but at decent level. Green color.
-            echo "#007872"
+            echo "#0088ff"
         fi
     fi
 fi

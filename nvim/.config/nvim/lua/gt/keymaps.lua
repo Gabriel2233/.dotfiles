@@ -1,3 +1,5 @@
+require'gt.options'
+
 local key_mapper = function(mode, key, result)
   vim.api.nvim_set_keymap(
     mode,
@@ -10,19 +12,21 @@ end
 key_mapper('i', 'kj', '<ESC>')
 key_mapper('v', 'kj', '<ESC>')
 key_mapper('n', '<Leader>so', ':so %<CR>')
+key_mapper('n', '<Tab>', ':bnext<CR>')
 
 -- Telescope keymaps
-key_mapper('n', '<Leader>ff', ':Telescope find_files<CR>')
+key_mapper('n', '<Leader>ff', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>')
 key_mapper('n', '<Leader>fg', ':Telescope git_files<CR>')
 key_mapper('n', '<Leader>fb', ':Telescope buffers<CR>')
+key_mapper('n', '<Leader>fd', ':lua require("plugin.telescope").search_dotfiles()<CR>')
 
 -- Harpoon keymaps
 key_mapper('n', '<Leader>hq', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
 key_mapper('n', '<Leader>hc', ':lua require("harpoon.mark").add_file()<CR>')
-key_mapper('n', '<Leader>ha', ':lua require("harpoon.ui").nav_file(0)<CR>')
-key_mapper('n', '<Leader>hs', ':lua require("harpoon.ui").nav_file(1)<CR>')
-key_mapper('n', '<Leader>hd', ':lua require("harpoon.ui").nav_file(2)<CR>')
-key_mapper('n', '<Leader>hf', ':lua require("harpoon.ui").nav_file(3)<CR>')
+key_mapper('n', '<Leader>ha', ':lua require("harpoon.ui").nav_file(1)<CR>')
+key_mapper('n', '<Leader>hs', ':lua require("harpoon.ui").nav_file(2)<CR>')
+key_mapper('n', '<Leader>hd', ':lua require("harpoon.ui").nav_file(3)<CR>')
+key_mapper('n', '<Leader>hf', ':lua require("harpoon.ui").nav_file(4)<CR>')
 
 -- Lsp Actions keymaps
 key_mapper('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
@@ -34,9 +38,8 @@ key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
 key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
 key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-key_mapper('n', '<Leader>af', ':lua vim.lsp.buf.code_action()<CR>')
+key_mapper('n', '<Leader>ga', ':lua vim.lsp.buf.code_action()<CR>')
 key_mapper('n', '<Leader>rn', ':lua vim.lsp.buf.rename()<CR>')
-
 
 -- Buffer delete
 key_mapper('n', '<Leader>q', ':Bdelete<CR>')
@@ -56,8 +59,8 @@ key_mapper('n', 'k', 'gk')
 -- Some more
 key_mapper('v', '<', '< <gv')
 key_mapper('v', '>', '> >gv')
+key_mapper('v', '>', '> >gv')
+key_mapper('v', '<Leader>y', '\"+y')
 
--- Clipboard (couldn't do it in lua :0)
-vim.cmd [[
-    vnoremap <Leader>y "+y
-]]
+-- Go
+key_mapper('n', '<Leader>go', ':GoFmt<CR>')

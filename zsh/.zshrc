@@ -65,23 +65,21 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH=$PATH:/home/gabriel/.local/bin
+
 # Vi mode
 bindkey -v
-
-alias c="clear"
-alias cat="bat"
-alias dc="nvim $HOME/.dotfiles"
-alias nv="nvim $HOME/.dotfiles/nvim/.config/nvim/init.vim"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-
-alias ss="$HOME/.local/bin/sessionizer.sh"
-alias rcd="$HOME/.local/bin/record.sh"
-
-alias gw="cd $HOME/www/projects/go"
-
-alias nfc="neofetch --ascii_distro Arch_old"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# === ALIASES === #
+alias prog="cd Documentos/prog"
+
+alias gow="cd go/src/github.com/gtvb"
+alias gowr="go run ."
+
+alias jsw="cd www/js"
+alias rsw="cd www/rust"
