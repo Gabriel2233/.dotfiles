@@ -1,42 +1,18 @@
-vim.g.gt_colorscheme = "gruvbox"
+ vim.g.colorscheme = "gruvbox"
 
-function ColorMyPencils()
-    vim.g.gruvbox_contrast_dark = 'hard'
-    vim.g.tokyonight_transparent_sidebar = true
-    vim.g.tokyonight_transparent = true
-    vim.g.gruvbox_invert_selection = '0'
-    vim.opt.background = "dark"
-
-    vim.cmd("colorscheme " .. vim.g.gt_colorscheme)
-
-    local hl = function(thing, opts)
-        vim.api.nvim_set_hl(0, thing, opts)
-    end
-
-    hl("SignColumn", {
-        bg = "none",
-    })
-
-    hl("ColorColumn", {
-        ctermbg = 0,
-        bg = "#555555",
-    })
-
-    hl("CursorLineNR", {
-        bg = "None"
-    })
-
-    hl("Normal", {
-        bg = "none"
-    })
-
-    hl("LineNr", {
-        fg = "#5eacd3"
-    })
-
-    hl("netrwDir", {
-        fg = "#5eacd3"
-    })
-
+ function ColorMyPencils()
+    vim.cmd("colorscheme " .. vim.g.colorscheme)
+    vim.cmd[[
+    highlight ColorColumn ctermbg=0 guibg=grey
+    hi SignColumn guibg=none
+    hi CursorLineNR guibg=None
+    highlight Normal guibg=none
+    " highlight LineNr guifg=#ff8659
+    " highlight LineNr guifg=#aed75f
+    highlight LineNr guifg=#5eacd3
+    highlight netrwDir guifg=#5eacd3
+    highlight qfFileName guifg=#aed75f
+    hi TelescopeBorder guifg=#5eacd
+    ]]
 end
 ColorMyPencils()

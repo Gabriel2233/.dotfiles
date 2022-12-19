@@ -68,7 +68,7 @@ export PATH=$PATH:/home/gabriel/.local/bin
 
 # Vi mode
 bindkey -v
-
+ 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin

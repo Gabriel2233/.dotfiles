@@ -1,66 +1,42 @@
-require'gt.options'
+vim.g.mapleader = " "
 
-local key_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(
-    mode,
-    key,
-    result,
-    {noremap = true}
-  )
-end
+vim.keymap.set("n", "<leader>so", ":so %<CR>")
+vim.keymap.set("n", "<leader>q", ":Bdelete<CR>")
 
-key_mapper('i', 'kj', '<ESC>')
-key_mapper('v', 'kj', '<ESC>')
-key_mapper('n', '<Leader>so', ':so %<CR>')
-key_mapper('n', '<Tab>', ':bnext<CR>')
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Telescope keymaps
-key_mapper('n', '<Leader>ff', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>')
-key_mapper('n', '<Leader>fg', ':Telescope git_files<CR>')
-key_mapper('n', '<Leader>fb', ':Telescope buffers<CR>')
-key_mapper('n', '<Leader>fd', ':lua require("plugin.telescope").search_dotfiles()<CR>')
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
--- Harpoon keymaps
-key_mapper('n', '<Leader>hq', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
-key_mapper('n', '<Leader>hc', ':lua require("harpoon.mark").add_file()<CR>')
-key_mapper('n', '<Leader>ha', ':lua require("harpoon.ui").nav_file(1)<CR>')
-key_mapper('n', '<Leader>hs', ':lua require("harpoon.ui").nav_file(2)<CR>')
-key_mapper('n', '<Leader>hd', ':lua require("harpoon.ui").nav_file(3)<CR>')
-key_mapper('n', '<Leader>hf', ':lua require("harpoon.ui").nav_file(4)<CR>')
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", "\"_dP")
 
--- Lsp Actions keymaps
-key_mapper('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
-key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
-key_mapper('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
-key_mapper('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
-key_mapper('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
-key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
-key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
-key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
-key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-key_mapper('n', '<Leader>ga', ':lua vim.lsp.buf.code_action()<CR>')
-key_mapper('n', '<Leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
 
--- Buffer delete
-key_mapper('n', '<Leader>q', ':Bdelete<CR>')
+vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d")
 
--- Window management keymaps
-key_mapper('n', '<C-h>', '<C-w><C-h>')
-key_mapper('n', '<C-j>', '<C-w><C-j>')
-key_mapper('n', '<C-k>', '<C-w><C-k>')
-key_mapper('n', '<C-l>', '<C-w><C-l>')
-key_mapper('n', '<Left>', ':vertical resize +2<CR>')
-key_mapper('n', '<Right>', ':vertical resize -2<CR>')
-key_mapper('n', '<Up>', ':resize +2<CR>')
-key_mapper('n', '<Down>', ':resize -2<CR>')
-key_mapper('n', 'j', 'gj')
-key_mapper('n', 'k', 'gk')
+-- This is going to get me cancelled
+vim.keymap.set("i", "kj", "<Esc>")
+vim.keymap.set("v", "kj", "<Esc>")
 
--- Some more
-key_mapper('v', '<', '< <gv')
-key_mapper('v', '>', '> >gv')
-key_mapper('v', '>', '> >gv')
-key_mapper('v', '<Leader>y', '\"+y')
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>fo", function()
+    vim.lsp.buf.format()
+end)
 
--- Go
-key_mapper('n', '<Leader>go', ':GoFmt<CR>')
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })

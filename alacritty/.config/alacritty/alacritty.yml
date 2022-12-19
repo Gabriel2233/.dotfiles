@@ -27,7 +27,7 @@ colors:
     blue:    '0x5c5cff'
     magenta: '0xff00ff'
     cyan:    '0x00ffff'
-    white:   '0xffffff'
+#     white:   '0xffffff'
 
 cursor:
   style:

@@ -1,63 +1,33 @@
-local opt = vim.opt
-vim.g.mapleader = ' '
+vim.opt.guicursor = ""
 
-opt.completeopt    = {
-  "menu",
-  "menuone",
-  "noselect",
-  "noinsert",
-} -- better completion
-opt.termguicolors = true
-opt.signcolumn = "yes"
-opt.showmode = false
-opt.showcmd = true
-opt.cmdheight = 1 -- Height of the command bar
-opt.incsearch = true -- Makes search act like search in modern browsers
-opt.showmatch = true -- show matching brackets when text indicator is over them
-opt.relativenumber = true -- Show line numbers
-opt.number = true -- But show the actual number for the line we're on
-opt.ignorecase = true -- Ignore case when searching...
-opt.smartcase = true -- ... unless there is a capital letter in the query
-opt.hidden = true -- I like having buffers stay around
-opt.cursorline = true -- Highlight the current line
-opt.equalalways = false -- I don't like my windows changing all the time
-opt.splitright = true -- Prefer windows splitting to the right
-opt.splitbelow = true -- Prefer windows splitting to the bottom
-opt.updatetime = 4000 -- Make updates happen faster
-opt.hlsearch = false -- I wouldn't use this without my DoNoHL function
-opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
--- Tabs
-opt.autoindent = true
-opt.cindent = true
-opt.wrap = false
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
-opt.expandtab = true
+vim.opt.smartindent = true
 
-opt.breakindent = true
-opt.showbreak = string.rep(" ", 3) -- Make it so that long lines wrap smartly
-opt.linebreak = true
+vim.opt.wrap = false
 
-opt.foldmethod = "marker"
-opt.foldlevel = 0
-opt.modelines = 1
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
 
-opt.belloff = "all" -- Just turn the dang bell off
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
-opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true
 
-opt.inccommand = "split"
-opt.swapfile = false -- Living on the edge
-opt.shada = { "!", "'1000", "<50", "s10", "h" }
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
 
-opt.mouse = "n"
+vim.opt.updatetime = 50
 
--- set joinspaces
-opt.joinspaces = false -- Two spaces and grade school, we're done
+vim.opt.colorcolumn = "80"
 
--- set fillchars=eob:~
-opt.fillchars = { eob = "~" }
-opt.guicursor = "n-v-c:block-Cursor"
+vim.g.mapleader = " "
